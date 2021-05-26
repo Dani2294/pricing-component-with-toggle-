@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@import "config";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	background-color: #f6f6fd;
+	background: url("../images/bg-top.svg") top right no-repeat,
+		url("../images/bg-bottom.svg") left bottom no-repeat;
+	background-size: 360px, 350px;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+span {
+	display: inline-block;
+}
+
+.annually {
+	display: none;
+}
+
+/* MAIN DESIGN */
+.container {
+	margin: 3rem auto;
+	max-width: 1000px;
+	padding: 1rem;
+	text-align: center;
+
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		color: $grayish-blue;
+	}
+
+	.toggle-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7rem;
+
+		.periodicity {
+			color: $light-grayish-blue;
+			font-size: 1.5rem;
+		}
+
+		label {
+			display: inline-block;
+			height: 2.8rem;
+			width: 5.5rem;
+			position: relative;
+			margin: 0 2rem;
+
+			input {
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				appearance: none;
+				height: 100%;
+				margin: 0;
+				max-width: 100%;
+				width: 100%;
+			}
+
+			.toggler {
+				display: flex;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: $linear-gradient;
+				border-radius: 1.5rem;
+				cursor: pointer;
+				transition: all 500ms ease-in-out;
+
+				.inner-toggler {
+					position: absolute;
+					background: #fff;
+					border-radius: 50%;
+					height: 2rem;
+					width: 2rem;
+					right: 4px;
+					transition: all 500ms ease-in-out;
+				}
+			}
+
+			input:checked + .toggler .inner-toggler {
+				margin-right: 2.7rem;
+			}
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.pricing-cards {
+		display: flex;
+		align-items: center;
+		max-width: 100%;
+
+		.card {
+			padding: 3rem;
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 10px 35px 15px rgba($color: #a3a8f0, $alpha: 0.3);
+			width: 100%;
+
+			.type {
+				font-size: 1.8rem;
+				color: $grayish-blue;
+				margin-bottom: 2rem;
+			}
+
+			.pricing,
+			.monthly,
+			.annually {
+				font-size: 6.75rem;
+				color: $dark-grayish-blue;
+				margin-bottom: 2rem;
+				span {
+					position: relative;
+					top: -10px;
+					font-size: 3.75rem;
+					margin-right: 1rem;
+				}
+			}
+
+			.specs {
+				font-size: 1.5rem;
+				padding: 1.8rem 0;
+				color: $grayish-blue;
+				border-top: 1px solid $light-grayish-blue;
+			}
+			.specs:last-of-type {
+				border-bottom: 1px solid $light-grayish-blue;
+				margin-bottom: 3rem;
+			}
+		}
+
+		.card-professional {
+			background: $linear-gradient;
+			padding: 5rem 3rem;
+			z-index: 20;
+
+			.type,
+			.pricing,
+			.specs {
+				color: #f6f6fe;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.pricing-cards {
+		flex-direction: column;
+
+		.card {
+			max-width: 350px;
+			margin-top: 4rem;
+		}
+
+		.card:first-of-type {
+			margin-top: 0;
+		}
+	}
+}

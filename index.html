@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | [Pricing component with toggle]</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Our Pricing</h1>
+      <div class="toggle-wrapper">
+        <span class="periodicity">Annually</span>
+        <label id="switch" for="toggle">
+          <input type="checkbox" id="toggle" class="checking" />
+          <span class="toggler">
+            <span class="inner-toggler"></span>
+          </span>
+          <!-- <span></span> -->
+        </label>
+        <span class="periodicity">Monthly</span>
+      </div>
+
+      <!-- PRICING CARDS-->
+      <div class="pricing-cards">
+        <div class="card">
+          <p class="type">Basic</p>
+          <p class="pricing monthly show"><span>$</span>19.99</p>
+          <p class="pricing annually"><span>$</span>199.99</p>
+          <p class="specs">500 GB Storage</p>
+          <p class="specs">2 Users Allowed</p>
+          <p class="specs">Send up to 3 GB</p>
+          <a href="#" class="btn btn-purple">Learn more</a>
+        </div>
+
+        <!-- Professional card -->
+        <div class="card card-professional">
+          <p class="type">Professional</p>
+          <p class="pricing monthly show"><span>$</span>24.99</p>
+          <p class="pricing annually"><span>$</span>249.99</p>
+          <p class="specs">1 TB Storage</p>
+          <p class="specs">5 Users Allowed</p>
+          <p class="specs">Send up to 10 GB</p>
+          <a href="#" class="btn btn-light">Learn more</a>
+        </div>
+        <!--  -->
+
+        <div class="card">
+          <p class="type">Master</p>
+          <p class="pricing monthly show"><span>$</span>39.99</p>
+          <p class="pricing annually"><span>$</span>399.99</p>
+          <p class="specs">2 TB Storage</p>
+          <p class="specs">10 Users Allowed</p>
+          <p class="specs">Send up to 20 GB</p>
+          <a href="#" class="btn btn-purple">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/toggle.js"></script>
+  </body>
+</html>
